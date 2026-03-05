@@ -9,6 +9,9 @@ int main(){
 
     int number = rand() % 1000 + 1;
 
+    // beyza
+
+    
     do
     {
         printf("I chose a number between 1 and 1000, guess what it is?\n");

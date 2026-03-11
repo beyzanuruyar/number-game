@@ -7,11 +7,12 @@ int main(){
     
     srand(time(NULL));
 
-    
+    int rights=10;
     int tries=0;
     int choice;
     int max;
      int guess;
+     printf("you have 10 rights lets go start\n");
 
     printf("choose difficulty\n");
     printf("1-Easy (1-100)\n ");
@@ -32,6 +33,7 @@ int main(){
     do
     {
         tries++;
+        rights--;
         printf("I chose a number between 1 and %d, guess what it is?\n",max);
         scanf("%d",&guess);
         if(number<guess){
@@ -44,7 +46,11 @@ int main(){
         if (number==guess)
         {
             printf("Congratulations! You guessed correctly.\n");
-            printf("you guess is %d is tries\n", tries);
+            printf("you guess is %d\n", tries);
+        }
+        if (rights==0){
+            printf("GAME OVER");
+            break;
         }
         
     } while (guess!=number);

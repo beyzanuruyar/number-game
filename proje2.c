@@ -49,7 +49,7 @@ int main(){
             printf("you guess is %d\n", tries);
         }
         if (rights==0){
-            printf("GAME OVER");
+            printf("GAME OVER the number was %d",number);
             break;
         }
         
